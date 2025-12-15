@@ -1,0 +1,17 @@
+﻿@page "/Registrieren"
+@model M004_RazorPages.Pages.RegistrierenModel
+
+<h2>Registrieren: </h2>
+
+@* asp-page-handler: Alternative zu asp-action *@
+<form asp-page-handler="CreateUser" method="post">
+	Username:
+	<input type="text" name="user" />
+	<br />
+
+	Passwort:
+	<input type="password" name="pw" />
+	<br />
+
+	<button type="submit">Registrieren</button>
+</form>

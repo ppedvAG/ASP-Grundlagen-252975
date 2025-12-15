@@ -1,0 +1,22 @@
+﻿@* @page: Definiert, dass diese CSHTML-Datei alleine steht (und alleine gerendert wird) *@
+@* Die Route wird über Ordnerstruktur + Dateiname gebaut *@
+@page "/Index"
+
+@* @model entspricht hier generell der Datei dahinter *@
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Zahl: @Model.Zahl</h2>
+
+@if (Model.user != null)
+{
+	<h2>Hallo @Model.user.Username</h2>
+}
