@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "Registrieren";
+}
+
+<h2>Registrieren: </h2>
+
+@* asp-action: Führt eine Methode im Backend aus *@
+@* method: Definiert, ob diese Form GET oder POST ist (hier nicht notwendig) *@
+<form asp-action="CreateUser" method="post">
+	Username: 
+	<input type="text" name="user"/>  @* name: Leitet einen Wert an das Backend weiter *@
+	<br />
+	
+	Passwort:
+	<input type="password" name="pw"/>
+	<br />
+
+	<button type="submit">Registrieren</button>
+</form>
+
+@DateTime.Now
+
+@(1 + 2)
+
+@for (int i = 0; i < 10; i++)
+{
+	<p>@i</p>
+}
+
+@* @Html.Raw("<p>1</p>") @* Rendert den HTML-Code, welcher von einem String kommt *@
