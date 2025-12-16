@@ -1,0 +1,39 @@
+﻿@using M000_DataAccess.Models
+@model Kurse
+
+<h2>@Model.Kursname bearbeiten</h2>
+
+<form asp-action="Speichern">
+	<input type="hidden" asp-for="@Model.Id"/>
+
+	@* <div asp-validation-summary="All"/> *@
+
+	<div>
+		Kursname:
+		<input type="text" asp-for="@Model.Kursname"/>
+		<span asp-validation-for="@Model.Kursname"/>
+	</div>
+
+	<div>
+		Dauer in Tagen:
+		<input type="number" asp-for="@Model.DauerInTagen" />
+		<span asp-validation-for="@Model.DauerInTagen" />
+	</div>
+
+	<div>
+		Aktiv:
+		<input type="number" asp-for="@Model.Aktiv" />
+		<span asp-validation-for="@Model.Aktiv" />
+	</div>
+
+	<div>
+		<button type="submit">Speichern</button>
+	</div>
+</form>
+
+@section Scripts
+{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

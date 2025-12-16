@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_EntityFramework", "M00
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M007_ModelBinding", "M007_ModelBinding\M007_ModelBinding.csproj", "{3C4F6870-5463-42AD-B03F-F6EFA81D59A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M000_DataAccess", "M000_DataAccess\M000_DataAccess.csproj", "{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3C4F6870-5463-42AD-B03F-F6EFA81D59A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C4F6870-5463-42AD-B03F-F6EFA81D59A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C4F6870-5463-42AD-B03F-F6EFA81D59A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
