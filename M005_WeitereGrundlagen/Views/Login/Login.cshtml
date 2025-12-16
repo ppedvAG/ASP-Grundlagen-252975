@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Login";
+}
+
+<h2>Login: </h2>
+
+<form asp-action="LoginUser" method="post">
+	Username:
+	<input type="text" name="user" />
+	<br />
+
+	Passwort:
+	<input type="password" name="pw" />
+	<br />
+
+	Eingeloggt bleiben:
+	<input type="checkbox" name="stayLoggedIn"/>
+	<br />
+
+	<button type="submit">Einloggen</button>
+</form>

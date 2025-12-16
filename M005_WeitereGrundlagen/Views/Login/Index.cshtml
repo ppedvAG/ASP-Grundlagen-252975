@@ -1,0 +1,14 @@
+﻿@* dynamic: Objekt mit beliebigen Feldern (zur Editorzeit nicht bekannt) *@
+
+@* @model: Definiert einen fixen Typen für das Model-Objekt *@
+@* WICHTIG: kleines m bei @model *@
+@model User
+
+@if (Model != null)
+{
+	<h2>Hallo @Model.Username</h2>  @* Großes M bei der Variable *@
+}
+else
+{
+	<h2>Kein User angemeldet</h2>
+}

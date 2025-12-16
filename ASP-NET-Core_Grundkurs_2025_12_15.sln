@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M003_MVC", "M003_MVC\M003_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M004_RazorPages", "M004_RazorPages\M004_RazorPages.csproj", "{9C71E09E-1A66-4F76-A9E2-238596181D1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M005_WeitereGrundlagen", "M005_WeitereGrundlagen\M005_WeitereGrundlagen.csproj", "{F6B5A2A8-C188-4E13-812E-3580DB1AA114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_EntityFramework", "M006_EntityFramework\M006_EntityFramework.csproj", "{F82262D7-0295-4761-9A8F-7EB46AC0174F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{9C71E09E-1A66-4F76-A9E2-238596181D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C71E09E-1A66-4F76-A9E2-238596181D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C71E09E-1A66-4F76-A9E2-238596181D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B5A2A8-C188-4E13-812E-3580DB1AA114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B5A2A8-C188-4E13-812E-3580DB1AA114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B5A2A8-C188-4E13-812E-3580DB1AA114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B5A2A8-C188-4E13-812E-3580DB1AA114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82262D7-0295-4761-9A8F-7EB46AC0174F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82262D7-0295-4761-9A8F-7EB46AC0174F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82262D7-0295-4761-9A8F-7EB46AC0174F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82262D7-0295-4761-9A8F-7EB46AC0174F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
