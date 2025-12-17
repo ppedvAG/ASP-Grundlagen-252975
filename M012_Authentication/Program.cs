@@ -1,4 +1,5 @@
 using M012_Authentication.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,12 +24,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 	options.Password.RequireLowercase = false;
 	options.Password.RequireUppercase = false;
 })
-	.AddRoles<IdentityRole>() //Das Role-System hinzufügen
+	.AddRoles<IdentityRole>() //Das Role-System hinzufï¿½gen
 	.AddEntityFrameworkStores<ApplicationDbContext>();
 
 //SignInManager: Allgemeine Userverwaltung (Einloggen, Ausloggen, ...)
 
-//UserManager: Gibt Informationen über den derzeitigen User
+//UserManager: Gibt Informationen ï¿½ber den derzeitigen User
 
 //RoleManager: Verwaltung von Rollen
 

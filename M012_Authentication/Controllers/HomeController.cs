@@ -15,7 +15,7 @@ public class HomeController(
 {
 	public async Task<IActionResult> Index()
 	{
-		await sim.SignInAsync(new IdentityUser() { UserName = "Admin2", Email = "admin2@example.com" }, true);
+		//await sim.SignInAsync(new IdentityUser() { UserName = "Admin2", Email = "admin2@example.com" }, true);
 
 		return View();
 	}
