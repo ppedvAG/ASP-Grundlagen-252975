@@ -1,0 +1,14 @@
+﻿@using Microsoft.Extensions.Options
+@using System.Globalization
+@inject IOptions<RequestLocalizationOptions> options
+@{
+	string[] cultures = ["de", "en", "fr"];
+	IEnumerable<SelectListItem> items = cultures.Select(e => new SelectListItem() { Text = e, Value = e });
+	string url = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+<form asp-controller="Home" asp-action="SelectLanguage" asp-route-returnUrl="@url">
+	Sprache: 
+	<select asp-items="@items" name="code" onchange="this.form.submit();">
+	</select>
+</form>

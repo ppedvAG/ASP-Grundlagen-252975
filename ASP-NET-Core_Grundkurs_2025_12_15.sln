@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M007_ModelBinding", "M007_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M000_DataAccess", "M000_DataAccess\M000_DataAccess.csproj", "{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M008_Lokalisierung", "M008_Lokalisierung\M008_Lokalisierung.csproj", "{7479F51B-F872-40DB-84A8-0C2E2847C243}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD7E179-B7F8-4D6E-B030-8D32A7BC7768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7479F51B-F872-40DB-84A8-0C2E2847C243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7479F51B-F872-40DB-84A8-0C2E2847C243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7479F51B-F872-40DB-84A8-0C2E2847C243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7479F51B-F872-40DB-84A8-0C2E2847C243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
