@@ -1,0 +1,50 @@
+﻿<div>
+	Username: <input type="text" id="username"/>
+	<br/>
+	Nachricht: <input type="text" id="msg"/>
+	<br />
+	<button id="send">Senden</button>
+
+	@* id's werden per JavaScript angesprochen *@
+	<ul id="msgList"/>
+</div>
+
+<script src="~/lib/aspnet-signalr/signalr.js">
+</script>
+
+<script>
+	//Verbindung zum Hub herstellen
+	var connection = new signalR.HubConnectionBuilder().withUrl("/Chat").build();
+	connection.start();
+
+	//Event registrieren, wenn eine Nachricht vom Hub empfangen wurde
+	connection.on("ReceiveMessage", function(user, msg) {
+		//Neues Listenelement erzeugen und zum ul-Container hinzufügen
+		var li = document.createElement("li");
+		li.textContent = new Date().toLocaleString() + ": " + user + " sagt: " + msg;
+		document.getElementById("msgList").appendChild(li);
+	});
+
+	//Button Click
+	document.getElementById("send").addEventListener("click", function(e) {
+		var u = document.getElementById("username").value;
+		var m = document.getElementById("msg").value;
+		connection.invoke("HubNachrichtEmpfangen", u, m);
+	});
+
+	///////////////////////////////////////////////////////////////////////
+
+	connection.on("UserVerbunden", function () {
+		//Dieser Code wird bei Empfangen einer Nachricht des Hubs ausgeführt
+		var li = document.createElement("li");
+		li.textContent = new Date().toLocaleString() + " Neuer Benutzer";
+		document.getElementById("msgList").appendChild(li)
+	});
+
+	connection.on("UserGetrennt", function () {
+		//Dieser Code wird bei Empfangen einer Nachricht des Hubs ausgeführt
+		var li = document.createElement("li");
+		li.textContent = new Date().toLocaleString() + " Benutzer getrennt";
+		document.getElementById("msgList").appendChild(li)
+	});
+</script>

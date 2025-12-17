@@ -1,0 +1,23 @@
+meta {
+  name: AlleKurse
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://localhost:7034/api/Kurs/all
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "kursname": "ASP Web API",
+    "dauerInTagen": 2,
+    "aktiv": 1
+  }
+}

@@ -3,7 +3,8 @@
 @inject IOptions<RequestLocalizationOptions> options
 @{
 	string[] cultures = ["de", "en", "fr"];
-	IEnumerable<SelectListItem> items = cultures.Select(e => new SelectListItem() { Text = e, Value = e });
+	string? currentCulture = Context.Request.Cookies["lang"];
+	IEnumerable<SelectListItem> items = cultures.Select(e => new SelectListItem() { Text = e, Value = e, Selected = e == currentCulture });
 	string url = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 

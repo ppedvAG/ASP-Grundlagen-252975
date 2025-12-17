@@ -1,15 +1,16 @@
-using M008_Lokalisierung.Middleware;
+using M000_DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddLocalization(o => o.ResourcesPath = "Resources");
+string? conn = builder.Configuration.GetConnectionString("KursDB");
+if (conn != null)
+	builder.Services.AddDbContext<KursDBContext>(o => o.UseSqlServer(conn));
 
 var app = builder.Build();
-
-////////////////////////////////////////////////////////////////////////////////////////
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -18,8 +19,6 @@ if (!app.Environment.IsDevelopment())
 	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
-
-app.UseMiddleware<LocalizationMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -32,5 +31,6 @@ app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Home}/{action=Index}/{id?}")
 	.WithStaticAssets();
+
 
 app.Run();

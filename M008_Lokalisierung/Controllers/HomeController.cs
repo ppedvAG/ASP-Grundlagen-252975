@@ -13,8 +13,8 @@ public class HomeController(ILogger<HomeController> logger, IStringLocalizer<Hom
 {
 	public IActionResult Index()
 	{
-		CultureInfo.CurrentCulture = new CultureInfo("fr");
-		CultureInfo.CurrentUICulture = new CultureInfo("fr");
+		//CultureInfo.CurrentCulture = new CultureInfo("fr");
+		//CultureInfo.CurrentUICulture = new CultureInfo("fr");
 
 		//CultureInfo beeinflusst den StringLocalizer
 		LocalizedString str = localizer["Hello"];
@@ -35,7 +35,7 @@ public class HomeController(ILogger<HomeController> logger, IStringLocalizer<Hom
 		HttpContext.Response.Cookies.Append("lang", code);
 
 		//Hier wird ein Reload der Page gemacht (lädt die lokalisierten Strings)
-		return View(returnUrl);
+		return LocalRedirect(returnUrl);
 	}
 
 	[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

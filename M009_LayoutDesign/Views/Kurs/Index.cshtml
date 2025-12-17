@@ -1,0 +1,33 @@
+﻿@using M000_DataAccess.Models
+@model IEnumerable<Kurse>
+
+<h2 class="text-center border border-black bg-warning p-2">Alle Kurse</h2>
+
+<table class="table table-hover">
+	<tr>
+		<th>ID</th>
+		<th>Kursname</th>
+		<th>Dauer in Tagen</th>
+		<th>Aktiv</th>
+		<th></th>
+	</tr>
+
+	@{
+		int row = 0;
+		foreach (Kurse k in Model)
+		{
+			<tr class="@(row % 3 == 0 ? "table-info" : "") align-middle">
+				<td>@k.Id</td>
+				<td>@k.Kursname</td>
+				<td>@k.DauerInTagen</td>
+				<td>@k.Aktiv</td>
+				<td>
+					<a asp-action="KursBearbeiten" asp-route-id="@k.Id">
+						<button class="btn btn-primary">Bearbeiten</button>
+					</a>
+				</td>
+			</tr>
+			row++;
+		}
+	}
+</table>
